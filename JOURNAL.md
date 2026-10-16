@@ -1,4 +1,5 @@
 # Week 3
+
 I DID EVERYTHING IN ROUGHLY ONE DAY!
 
 First, I set up the entire project in cubemx. I added comms protocols, breakouts, crystal oscillators, etc. After that, I added the required stuff in KiCAD. Here I added 2 ICM45686 IMUs, 1 BMP581 Barometer, and then breakouts for power output. Then, I wired up the stuff I added here using the existing datasheets. I used the stm32h743vit6 as the mcu as it is very powerful. Although, I reckon I could've used the stm32f405rgt6 as it is cheaper and widely used in a lot of consumer oriented drone flight computers.
@@ -17,3 +18,14 @@ This was the day the flight computer got aestheticized. Firstly, I made the powe
 https://lapse.hackclub.com/timelapse/FG-Le-8sbzr-
 
 Note: I may add some changes in the following week.
+
+# Week 4
+
+# Day 1
+
+Since I wanted to lower the fabrication costs, I lowered the layer count on the flight controller from 6 layers to 4. As a result, I'll now have to redo some of the routing to make it cleaner and also aesthetically pleasing. Tbh, no pcb I've made is as pretty as I expect it to be. It just turns out to look moderately good. I tried my best not to use the gnd layers but I had to use it at two locations. I mean, it shouldn't be THAT big of a problem.
+
+Next up, I shrunk the main flight controller and enlarged the power distribution unit. The previous version was just a tad bit in a weird form factor to my liking. Oh yeah and I also changed extra +5V pins to solder pads. Thats basically all the rework done. Now I'll start work on the telemetry unit.
+
+https://lapse.hackclub.com/timelapse/r8waVymlZS5T
+https://lapse.hackclub.com/timelapse/mZGoj2DNjKys
