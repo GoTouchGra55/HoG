@@ -29,3 +29,15 @@ Next up, I shrunk the main flight controller and enlarged the power distribution
 
 https://lapse.hackclub.com/timelapse/r8waVymlZS5T
 https://lapse.hackclub.com/timelapse/mZGoj2DNjKys
+
+# Day 2
+
+I started work on the schematics for the telemetry module. I've planned it to be controlled via a computer so there will not be any joysticks. Orrr now that i think of it, maybe I should add joysticks and only make the camera output on a computer. I used the sx1262 as the LoRa chip. It should work as expected since I've got no experience with it before and just followed the reference diagram. I also chose a very small stm32 chip bc i didn't really need that many pins tbh. With that, schematics were over.
+
+https://lapse.hackclub.com/timelapse/wV412dP2dNCY
+
+# Day 3
+
+I routed the entire board today. I used 4 layers as its an RF module. I tried my best not to use the ground layer but I had to use a small portion at a spot. Initially, I used 0.2mm traces. They looked pretty good imo but they gave me via clearance issues. So, I later switched to 0.1mm traces. I made the entire telemetry module as compact as I could make it while also including a single m2 mounting hole at the center of the board.
+
+https://lapse.hackclub.com/timelapse/GlbSt3y3Jzp2
