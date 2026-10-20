@@ -477,7 +477,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "HoG.kicad_pro",
+    "filename": "HoG_Telemetry.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -637,7 +637,7 @@
   },
   "sheets": [
     [
-      "68e01d72-9ec0-4dee-9a29-ce5d42ebb15a",
+      "ead72667-dd10-4d7e-8243-b443ac223965",
       "Root"
     ]
   ],
