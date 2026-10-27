@@ -11,12 +11,12 @@ https://lapse.hackclub.com/timelapse/OmWuiVIgm5il
 
 This is where the flight computer really started coming together. First, I added some extra breakout pins for the servos and power. Then, for the ESC connection pads, I was confused on the footprint that I had to use but later decided to modify an already existing footprint for a solder pad. Then, I basically locked in and routed everything together utilizing 5/6 layers and 1 layer has to be a solid ground. I may change this in the following week to a 4 layer pcb as it is significantly cheaper to fabricate.  
 https://lapse.hackclub.com/timelapse/38z7tmix-HnZ
-![Routing](image-1.png)
+![Routing](Assets/image-1.png)
 
 This was the day the flight computer got aestheticized. Firstly, I made the power distribution unit. This was a good idea as I do not want the noisy servo ground to come in contact with my telemetry ground. This would just make the board act up in the worst case scenario. Then, I tried adding a hog rider to make it in-theme with the board's name but it turned out horrible so I ditched it. Then I moved on to adding all the required text for the board like pin names and some form of branding. After that, the board is officially complete!  
 https://lapse.hackclub.com/timelapse/FG-Le-8sbzr-
 
-![HoG](image.png)
+![HoG](Assets/image.png)
 
 Note: I may add some changes in the following week.
 
@@ -27,29 +27,29 @@ Since I wanted to lower the fabrication costs, I lowered the layer count on the 
 Next up, I shrunk the main flight controller and enlarged the power distribution unit. The previous version was just a tad bit in a weird form factor to my liking. Oh yeah and I also changed extra +5V pins to solder pads. Thats basically all the rework done. Now I'll start work on the telemetry unit.
 
 https://lapse.hackclub.com/timelapse/r8waVymlZS5T
-![Routing](image-2.png)
+![Routing](Assets/image-2.png)
 
 https://lapse.hackclub.com/timelapse/mZGoj2DNjKys
-![Routing](image-3.png)
+![Routing](Assets/image-3.png)
 
 # Day 3
 
 I started work on the schematics for the telemetry module. I've planned it to be controlled via a computer so there will not be any joysticks. Orrr now that i think of it, maybe I should add joysticks and only make the camera output on a computer. I used the sx1262 as the LoRa chip. It should work as expected since I've got no experience with it before and just followed the reference diagram. I also chose a very small stm32 chip bc i didn't really need that many pins tbh. With that, schematics were over.
 
 https://lapse.hackclub.com/timelapse/wV412dP2dNCY
-![Schematics](image-4.png)
+![Schematics](Assets/image-4.png)
 
 # Day 4
 
 I routed the entire board today. I used 4 layers as its an RF module. I tried my best not to use the ground layer but I had to use a small portion at a spot. Initially, I used 0.2mm traces. They looked pretty good imo but they gave me via clearance issues. So, I later switched to 0.1mm traces. I made the entire telemetry module as compact as I could make it while also including a single m2 mounting hole at the center of the board.
 
 https://lapse.hackclub.com/timelapse/GlbSt3y3Jzp2
-![Receiver](image-5.png)
+![Receiver](Assets/image-5.png)
 
 # Day 5
 
 Basically, all I did today was design the radio transmitter. First I setup the pins in cubemx. I planned of using 2 joysticks so, I setup 4 adc channels for that purpose. Then, I did some comms config and then copied over the sx1262 schematics from the receiver section. Then, I used a different mcu as the one used in the receiver wouldn't really be sufficient for the transmitter due to low pin count. Finally, I routed everything and made the form factor somewhat close to the receiver BUT I couldn't add the mounting hole. So, this one will have to be either hot glued or slotted onto the case. That's about it for the entire drone.
 
 https://lapse.hackclub.com/timelapse/t4q8llYZos55
-![Routing](image-6.png)
-![PCB](image-7.png)
+![Routing](Assets/image-6.png)
+![PCB](Assets/image-7.png)
