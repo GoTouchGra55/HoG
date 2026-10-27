@@ -53,6 +53,3 @@ The flight controller board provides dedicated:
 
 Shaurya (Electronics)  
 Contact: [E-mail](shauryatamang.dev@gmail.com)
-
-Krish (CAD)  
-View: [Github](https://github.com/unknowngamer69/God-s-Hand)
