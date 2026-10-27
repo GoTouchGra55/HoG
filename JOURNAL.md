@@ -1,6 +1,4 @@
-# Week 3
-
-I DID EVERYTHING IN ROUGHLY ONE DAY!
+# DAY 1
 
 First, I set up the entire project in cubemx. I added comms protocols, breakouts, crystal oscillators, etc. After that, I added the required stuff in KiCAD. Here I added 2 ICM45686 IMUs, 1 BMP581 Barometer, and then breakouts for power output. Then, I wired up the stuff I added here using the existing datasheets. I used the stm32h743vit6 as the mcu as it is very powerful. Although, I reckon I could've used the stm32f405rgt6 as it is cheaper and widely used in a lot of consumer oriented drone flight computers.
 https://lapse.hackclub.com/timelapse/S5AEKcWjFcFN
@@ -19,9 +17,7 @@ https://lapse.hackclub.com/timelapse/FG-Le-8sbzr-
 
 Note: I may add some changes in the following week.
 
-# Week 4
-
-# Day 1
+# Day 2
 
 Since I wanted to lower the fabrication costs, I lowered the layer count on the flight controller from 6 layers to 4. As a result, I'll now have to redo some of the routing to make it cleaner and also aesthetically pleasing. Tbh, no pcb I've made is as pretty as I expect it to be. It just turns out to look moderately good. I tried my best not to use the gnd layers but I had to use it at two locations. I mean, it shouldn't be THAT big of a problem.
 
@@ -30,19 +26,19 @@ Next up, I shrunk the main flight controller and enlarged the power distribution
 https://lapse.hackclub.com/timelapse/r8waVymlZS5T
 https://lapse.hackclub.com/timelapse/mZGoj2DNjKys
 
-# Day 2
+# Day 3
 
 I started work on the schematics for the telemetry module. I've planned it to be controlled via a computer so there will not be any joysticks. Orrr now that i think of it, maybe I should add joysticks and only make the camera output on a computer. I used the sx1262 as the LoRa chip. It should work as expected since I've got no experience with it before and just followed the reference diagram. I also chose a very small stm32 chip bc i didn't really need that many pins tbh. With that, schematics were over.
 
 https://lapse.hackclub.com/timelapse/wV412dP2dNCY
 
-# Day 3
+# Day 4
 
 I routed the entire board today. I used 4 layers as its an RF module. I tried my best not to use the ground layer but I had to use a small portion at a spot. Initially, I used 0.2mm traces. They looked pretty good imo but they gave me via clearance issues. So, I later switched to 0.1mm traces. I made the entire telemetry module as compact as I could make it while also including a single m2 mounting hole at the center of the board.
 
 https://lapse.hackclub.com/timelapse/GlbSt3y3Jzp2
 
-# Day 4
+# Day 5
 
 Basically, all I did today was design the radio transmitter. First I setup the pins in cubemx. I planned of using 2 joysticks so, I setup 4 adc channels for that purpose. Then, I did some comms config and then copied over the sx1262 schematics from the receiver section. Then, I used a different mcu as the one used in the receiver wouldn't really be sufficient for the transmitter due to low pin count. Finally, I routed everything and made the form factor somewhat close to the receiver BUT I couldn't add the mounting hole. So, this one will have to be either hot glued or slotted onto the case. That's about it for the entire drone.
 
