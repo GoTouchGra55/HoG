@@ -41,6 +41,59 @@ The flight controller board provides dedicated:
 - 5 V rail
 - 3.3 V rail
 
+## Build Guide
+
+Unless you want a _not so pleasant_ experience, I'd advise you to follow the order below:
+
+1. Solder all SMD components first (MCU, IMU, passives)
+2. Solder larger components (connectors, headers)
+3. Verify power rails (5V, 3.3V) before powering MCU
+4. Double-check polarity of capacitors and power input before powering the board. Otherwise you've made a fancy capacitor bomb :D
+5. Flash firmware via ST-Link
+
+## Firmware Flashing Instructions
+### 1. Clone the repository
+```bash
+git clone git@github.com:GoTouchGra55/HoG.git
+```
+
+### 2. Open the project in a code editor
+Navigate into the firmware directory. For VS Code users:
+```bash
+cd HoG/src
+code .
+```
+
+### 3. Edit the code
+You have all the freedom to implement your own new features. Infact, I encourage you to do so.
+Just be sure to add your drivers to the `CMakeLists.txt` file or you'll be stuck with a nasty build error and wonder why your code won't work.
+_(Speaking from experience)_
+
+### 4. Build the firmware
+```bash
+cmake --preset Debug
+cmake --build --preset Debug
+```
+
+### 5. Connect the ST-Link debugger
+Connect the pins according to the silkscreen and the debugger labels.
+Note: You can skip the 3.3V if your board is powered by an external power source.
+
+### 6. Flash the firmware
+With the ST-Link connected press the Debug button in VS Code.
+Cortex-debug will launch the debugger and program the generated .elf file into the STM32's internal flash.
+Once the firmware has been flashed, you can stop the debugging session.
+
+### 7. Disconnect the ST-Link
+You can now disconnect the ST-Link from the HoG board before testing operation.
+
+The ST-Link is connected to the STM32's debug and reset circuitry. Leaving it connected can affect the NRST line and prevent the board from operating correctly when powered independently.
+
+### 8. Power the board
+Disconnect USB and power HoG from a suitable power source.
+The STM32 should now boot directly from its internal flash and execute the newly flashed firmware.
+
+
 ## Rough BOM
 
 | #   | Item           |        Cost | Supplier    |         Link |
