@@ -3,7 +3,7 @@ This is my first dedicated drone flight computer. It may appear a bit odd becaus
 
 This repository includes the custom flight controller, a PDU, and a telemetry unit that is to be used in the drone.
 
-![HoG](Assets/HoG.png)
+![HoG](Assets/HoG.png)  
 ![Telemetry](Assets/Telemetry.png)
 
 # Overviews
@@ -107,5 +107,5 @@ The STM32 should now boot directly from its internal flash and execute the newly
 
 # Author
 
-Shaurya Tamang 
+Shaurya Tamang   
 Contact: [E-mail](shauryatamang.dev@gmail.com)
